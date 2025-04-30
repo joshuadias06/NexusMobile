@@ -9,47 +9,54 @@
     android:background="@drawable/bg_dark"
     tools:context=".welcome.ActivityWelcome">
 
-    <!-- Animação de flocos de gelo caindo -->
+    <!-- Animação de Neve com brilho e suavidade -->
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/snowAnimation"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="0dp"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:lottie_rawRes="@raw/snowfall"
         app:lottie_loop="true"
         app:lottie_autoPlay="true"
         app:lottie_renderMode="software"
-        android:scaleType="fitXY"
-        android:alpha="0.3" />
+        app:lottie_speed="0.3"
+        android:scaleType="centerCrop"
+        android:alpha="0.15" />
 
-    <!-- Logo do NEXUS (estilo brasão) -->
+    <!-- Brilho de Gelo - Sobreposição -->
+    <ImageView
+        android:id="@+id/iceGlow"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/efeito_blue_flame"
+        android:scaleType="centerCrop"
+        android:alpha="0.05" />
+
+    <!-- LOGO com efeito de leve brilho -->
     <ImageView
         android:id="@+id/imgLogo"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_marginTop="60dp"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:layout_marginTop="40dp"
         android:src="@drawable/nexus_logo"
+        android:alpha="0.95"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Frase mágica de entrada -->
+    <!-- Frase mágica -->
     <TextView
         android:id="@+id/tvFrase"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="“A jornada da sua vida começa agora...”"
-        android:textSize="18sp"
+        android:textSize="20sp"
         android:textColor="#B0DAFF"
         android:fontFamily="@font/cinzel_regular"
         android:textAlignment="center"
+        android:shadowColor="#AAB0DAFF"
+        android:shadowDx="0"
+        android:shadowDy="0"
+        android:shadowRadius="6"
         android:layout_marginTop="24dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
@@ -57,12 +64,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Botão de Começar -->
     <Button
         android:id="@+id/btnComecar"
         android:layout_width="220dp"
         android:layout_height="50dp"
         android:text="@string/start_journey"
-        android:textColor="#B0DAFF"
+        android:textColor="#82CFFD"
         android:textStyle="bold"
         android:textSize="16sp"
         android:fontFamily="@font/cinzel_regular"
@@ -71,16 +79,16 @@
         android:paddingRight="16dp"
         android:paddingTop="12dp"
         android:paddingBottom="12dp"
-        android:elevation="6dp"
+        android:elevation="8dp"
         android:background="@drawable/btn_ice"
         android:backgroundTint="@null"
-        android:layout_marginTop="48dp"
+        android:stateListAnimator="@anim/btn_ice_anim"
+        android:layout_marginTop="40dp"
         app:layout_constraintTop_toBottomOf="@id/tvFrase"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:stateListAnimator="@anim/btn_ice_anim" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- Barra de Experiência -->
+    <!-- Nível do jogador -->
     <TextView
         android:id="@+id/tvNivel"
         android:layout_width="wrap_content"
@@ -92,13 +100,14 @@
         android:layout_marginBottom="8dp"
         app:layout_constraintBottom_toTopOf="@+id/progressBarXP"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginStart="24dp"/>
+        android:layout_marginStart="24dp" />
 
+    <!-- Barra de Experiência -->
     <ProgressBar
         android:id="@+id/progressBarXP"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="0dp"
-        android:layout_height="20dp"
+        android:layout_height="10dp"
         android:progress="0"
         android:max="100"
         android:progressDrawable="@drawable/progress_ice"
@@ -107,6 +116,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_marginStart="24dp"
-        android:layout_marginEnd="24dp"/>
+        android:layout_marginEnd="24dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
