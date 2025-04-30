@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Fundo do botão, com gradiente de gelo -->
+    <item>
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#B0DAFF" /> <!-- Cor base do gelo -->
+            <corners android:radius="12dp"/> <!-- Cantos arredondados -->
+            <stroke android:color="#A1C8FF" android:width="2dp"/> <!-- Contorno com cor de gelo -->
+        </shape>
+    </item>
+    <!-- Efeito de brilho -->
+    <item android:right="4dp" android:left="4dp" android:top="4dp" android:bottom="4dp">
+        <shape
+            android:shape="rectangle">
+            <solid android:color="#E0FFFF" /> <!-- Cor do brilho -->
+            <corners android:radius="12dp"/>
+        </shape>
+    </item>
+</layer-list>

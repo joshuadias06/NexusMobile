@@ -28,7 +28,7 @@ class ActivityWelcome : AppCompatActivity() {
         btnComecar.setOnClickListener {
             val intent = Intent(this, LoginActivity::class.java)
             startActivity(intent)
-            finish() // Finaliza esta activity para não voltar com o botão de voltar
+            finish()
         }
     }
 }

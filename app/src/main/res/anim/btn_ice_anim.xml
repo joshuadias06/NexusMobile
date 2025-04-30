@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Animação de mudança de cor quando pressionado -->
+    <objectAnimator
+        android:propertyName="backgroundColor"
+        android:duration="200"
+        android:valueFrom="@android:color/white"
+        android:valueTo="#A1C8FF"
+        android:valueType="colorType"/>
+
+    <!-- Animação de escala (efeito de "expansão" de gelo) -->
+    <scale
+        android:duration="300"
+        android:fromXScale="1"
+        android:fromYScale="1"
+        android:toXScale="1.05"
+        android:toYScale="1.05"/>
+
+    <!-- Animação de opacidade (efeito de brilho do gelo) -->
+    <alpha
+        android:duration="300"
+        android:fromAlpha="1.0"
+        android:toAlpha="0.8"/>
+</set>
