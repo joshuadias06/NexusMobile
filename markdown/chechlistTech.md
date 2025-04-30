@@ -1,8 +1,7 @@
-
 # ✅ Checklist Técnico – NEXUS Life RPG
 
 ## 📱 Aplicativo Mobile (Kotlin / Android)
-- [ ] Criar estrutura base do app (Kotlin + MVVM ou Clean Architecture)
+- [X] Criar estrutura base do app (Kotlin + MVVM ou Clean Architecture)
 - [ ] Implementar tela de boas-vindas
 - [ ] Implementar telas de login e cadastro
 - [ ] Tela de criação do personagem digital
@@ -26,7 +25,7 @@
 
 ## 🔧 Back-End (Spring Boot)
 - [ ] Criar projeto com estrutura modular (ex: controller/service/repository)
-- [ ] Configurar autenticação com JWT
+- [X] Configurar autenticação com JWT - API Login e Cadastro
 - [ ] CRUD de usuários e personagens
 - [ ] CRUD de missões (hábitos, metas, conquistas)
 - [ ] Sistema de pontos, níveis, moedas e XP
@@ -51,7 +50,7 @@
 ## 🧪 QA e Testes
 - [ ] Escrever testes unitários (JUnit + Mockito no back-end)
 - [ ] Testes automatizados no front (React Testing Library)
-- [ ] Testes E2E no mobile (Espresso) e web (Cypress)
+- [ ] Testes E2E no mobile (Appium) e web (Cypress)
 - [ ] Definir plano de testes funcionais
 - [ ] Gerar relatórios com Allure Reports
 - [ ] Automatizar testes de API com Postman/Newman
